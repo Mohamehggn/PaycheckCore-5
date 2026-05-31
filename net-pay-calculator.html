@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Pay Calculator 2026 - Calculate Net Pay from Gross Wages After Taxes</title>
+    <meta name="description" content="Free net pay calculator 2026. Calculate net pay from gross wages instantly. Includes federal tax, state tax, FICA, 401k, health insurance, HSA, FSA deductions. Best take home pay calculator after taxes.">
+    <meta name="keywords" content="net pay calculator, calculate net pay, gross to net calculator, net pay after taxes, take home pay calculator, net salary calculator, net income calculator, paycheck net pay calculator, calculate net salary, net vs gross pay calculator">
+    
+    <!-- AdSense Tag #1: Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9810476704160902" crossorigin="anonymous"></script>
+    
+    <!-- AdSense Tag #2: Meta Verification -->
+    <meta name="google-adsense-account" content="ca-pub-9810476704160902">
+    
+    <!-- AdSense Tag #3: Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDKHR4R06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FTDKHR4R06');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .calculator-body { padding: 40px; }
+        .input-group { margin-bottom: 25px; }
+        .input-group label { 
+            display: block; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #333;
+            font-size: 0.95em;
+        }
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        input { 
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 8px; 
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        input:focus { 
+            outline: none; 
+            border-color: #667eea; 
+        }
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .calculate-btn:hover { transform: translateY(-2px); }
+        .results {
+            margin-top: 30px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: none;
+        }
+        .results.show { display: block; }
+        .result-main {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .result-main .amount {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        .result-breakdown {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .result-item:last-child { border-bottom: none; }
+        .result-item.deduction { color: #dc3545; }
+        .result-item.total {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #667eea;
+        }
+        .how-to-use {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        .how-to-use h2 { color: #333; margin-bottom: 15px; font-size: 1.5em; }
+        .how-to-use h3 { color: #667eea; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; }
+        .how-to-use p, .how-to-use li { color: #555; line-height: 1.8; margin-bottom: 10px; }
+        .how-to-use ul { padding-left: 20px; }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .input-row { grid-template-columns: 1fr; }
+            .calculator-body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Net Pay Calculator</h1>
+            <p>Calculate your net pay from gross wages with all tax and benefit deductions</p>
+        </div>
+        
+        <div class="calculator-body">
+            <div class="input-group">
+                <label>Gross Wages per Paycheck ($)</label>
+                <input type="number" id="gross" placeholder="3000" step="50">
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Federal Income Tax (%)</label>
+                    <input type="number" id="fedTax" value="12" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label>State Income Tax (%)</label>
+                    <input type="number" id="stateTax" value="5" step="0.1">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>FICA - Social Security + Medicare (%)</label>
+                    <input type="number" id="fica" value="7.65" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label>401k / Retirement (%)</label>
+                    <input type="number" id="retirement" value="6" step="0.1">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Health Insurance ($ per paycheck)</label>
+                    <input type="number" id="health" value="150" step="10">
+                </div>
+                <div class="input-group">
+                    <label>HSA / FSA ($ per paycheck)</label>
+                    <input type="number" id="hsa" value="0" step="10">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Other Pre-Tax Deductions ($ per paycheck)</label>
+                <input type="number" id="other" value="0" step="10">
+            </div>
+
+            <button class="calculate-btn" onclick="calculateNetPay()">Calculate Net Pay</button>
+
+            <div class="results" id="results">
+                <div class="result-main">
+                    <div class="label">Your Net Take-Home Pay</div>
+                    <div class="amount" id="netPay">$0.00</div>
+                    <div class="label">Per Paycheck After All Deductions</div>
+                </div>
+                
+                <div class="result-breakdown">
+                    <h3 style="margin-bottom: 15px;">Paycheck Breakdown</h3>
+                    <div class="result-item">
+                        <span>Gross Wages:</span>
+                        <span id="grossPay">$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>Federal Income Tax:</span>
+                        <span id="fedTaxAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>State Income Tax:</span>
+                        <span id="stateTaxAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>FICA (SS + Medicare):</span>
+                        <span id="ficaAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>401k Contribution:</span>
+                        <span id="retireAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>Health Insurance:</span>
+                        <span id="healthAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>HSA/FSA:</span>
+                        <span id="hsaAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item deduction">
+                        <span>Other Deductions:</span>
+                        <span id="otherAmt">-$0.00</span>
+                    </div>
+                    <div class="result-item total">
+                        <span>Net Pay:</span>
+                        <span id="netPayTotal">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how-to-use">
+                <h2>How to Use the Net Pay Calculator</h2>
+                <p>This net pay calculator shows exactly how much money hits your bank account after all taxes and deductions. Use it to budget accurately and understand your true take-home income.</p>
+                
+                <h3>Step 1: Enter Gross Wages</h3>
+                <p>Input your gross pay per paycheck before any deductions. Find this on your pay stub or offer letter.</p>
+                
+                <h3>Step 2: Input Tax Rates</h3>
+                <p>Enter your federal and state income tax percentages. If unsure, use 12% federal and 5% state as averages, or check your last pay stub. FICA is always 7.65% for most W-2 employees.</p>
+                
+                <h3>Step 3: Add Pre-Tax Deductions</h3>
+                <p>Include 401k %, health insurance cost, HSA/FSA contributions, and other pre-tax benefits. These reduce your taxable income and net pay.</p>
+                
+                <h3>What is Net Pay vs Gross Pay?</h3>
+                <ul>
+                    <li><strong>Gross Pay:</strong> Total earnings before any deductions - your stated salary or hourly wage</li>
+                    <li><strong>Net Pay:</strong> Actual take-home pay deposited in your bank after taxes and deductions</li>
+                    <li><strong>Difference:</strong> Average 20-30% of gross pay goes to taxes and benefits</li>
+                </ul>
+
+                <h3>Common Net Pay Scenarios 2026</h3>
+                <ul>
+                    <li>$3,000 gross biweekly = ~$2,100-$2,300 net pay (single, standard deductions)</li>
+                    <li>$5,000 gross monthly = ~$3,500-$3,800 net pay (married, 401k + health)</li>
+                    <li>$4,000 gross biweekly = ~$2,800-$3,100 net pay (single, high tax state)</li>
+                    <li>$2,500 gross weekly = ~$1,750-$1,950 net pay (standard deductions)</li>
+                </ul>
+                
+                <h3>Why Your Net Pay Matters</h3>
+                <p>Your net pay determines your actual budget for rent, bills, savings, and spending. Many people budget based on gross salary and run short. Always budget using net pay - the money you actually receive.</p>
+                
+                <p><strong>Pro Tip:</strong> To increase net pay, contribute to 401k and HSA (pre-tax), claim proper W-4 allowances, or move to a no-income-tax state. Use our Tax Bracket Calculator to optimize.</p>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to All Calculators</a>
+        </div>
+    </div>
+
+    <script>
+        function calculateNetPay() {
+            const gross = parseFloat(document.getElementById('gross').value) || 0;
+            const fedRate = parseFloat(document.getElementById('fedTax').value) / 100 || 0;
+            const stateRate = parseFloat(document.getElementById('stateTax').value) / 100 || 0;
+            const ficaRate = parseFloat(document.getElementById('fica').value) / 100 || 0;
+            const retireRate = parseFloat(document.getElementById('retirement').value) / 100 || 0;
+            const health = parseFloat(document.getElementById('health').value) || 0;
+            const hsa = parseFloat(document.getElementById('hsa').value) || 0;
+            const other = parseFloat(document.getElementById('other').value) || 0;
+            
+            const fedTax = gross * fedRate;
+            const stateTax = gross * stateRate;
+            const fica = gross * ficaRate;
+            const retirement = gross * retireRate;
+            
+            const totalDeductions = fedTax + stateTax + fica + retirement + health + hsa + other;
+            const netPay = gross - totalDeductions;
+            
+            document.getElementById('grossPay').textContent = '$' + gross.toFixed(2);
+            document.getElementById('fedTaxAmt').textContent = '-$' + fedTax.toFixed(2);
+            document.getElementById('stateTaxAmt').textContent = '-$' + stateTax.toFixed(2);
+            document.getElementById('ficaAmt').textContent = '-$' + fica.toFixed(2);
+            document.getElementById('retireAmt').textContent = '-$' + retirement.toFixed(2);
+            document.getElementById('healthAmt').textContent = '-$' + health.toFixed(2);
+            document.getElementById('hsaAmt').textContent = '-$' + hsa.toFixed(2);
+            document.getElementById('otherAmt').textContent = '-$' + other.toFixed(2);
+            document.getElementById('netPay').textContent = '$' + netPay.toFixed(2);
+            document.getElementById('netPayTotal').textContent = '$' + netPay.toFixed(2);
+            
+            document.getElementById('results').classList.add('show');
+        }
+    </script>
+</body>
+</html>

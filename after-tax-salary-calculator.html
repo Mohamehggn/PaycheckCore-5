@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDKHR4R06"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FTDKHR4R06');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9810476704160902"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-9810476704160902">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>After Tax Salary Calculator 2026 - Take Home Pay | PaycheckCore</title>
+<meta name="description" content="Free after tax salary calculator for 2026. Calculate your take home pay after federal, state, FICA, and Medicare taxes. See net pay by year, month, bi-weekly, and weekly. Includes 401k and HSA deductions.">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #1a202c;
+        background: #f7fafc;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 18px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #fff;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s;
+    }
+    nav a:hover {
+        opacity: 0.85;
+    }
+    .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 60px 0 80px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 42px;
+        margin-bottom: 16px;
+        font-weight: 800;
+    }
+    .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.95;
+    }
+    .calculator-wrapper {
+        margin-top: -50px;
+        margin-bottom: 60px;
+    }
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 32px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        margin-bottom: 32px;
+    }
+    .calculator-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    @media (max-width: 900px) {
+        .calculator-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero h1 {
+            font-size: 32px;
+        }
+    }
+    .form-group {
+        margin-bottom: 22px;
+    }
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #2d3748;
+        font-size: 15px;
+    }
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.2s;
+        background: #fff;
+    }
+    input[type="number"]:focus,
+    select:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    .input-prefix {
+        position: relative;
+    }
+    .input-prefix span {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #718096;
+        font-weight: 600;
+    }
+    .input-prefix input {
+        padding-left: 32px;
+    }
+    .btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 14px rgba(102, 126, 234, 0.3);
+    }
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    .btn:active {
+        transform: translateY(0);
+    }
+    .results-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #2d3748;
+    }
+    .result-highlight {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 24px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 24px;
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+    }
+    .result-highlight .label {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .result-highlight .value {
+        font-size: 36px;
+        font-weight: 800;
+    }
+    .results-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+        .results-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .result-item {
+        background: #f7fafc;
+        padding: 16px;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+    }
+    .result-item .label {
+        font-size: 13px;
+        color: #718096;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .result-item .value {
+        font-size: 20px;
+        font-weight: 700;
+        color: #2d3748;
+    }
+    .pie-chart {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        margin: 24px auto;
+        position: relative;
+        background: #e2e8f0;
+    }
+    .pie-legend {
+        margin-top: 20px;
+    }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .legend-color {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 15px;
+    }
+    table th, table td {
+        padding: 14px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    table th {
+        background: #f7fafc;
+        font-weight: 700;
+        color: #2d3748;
+    }
+    table tr:hover {
+        background: #f7fafc;
+    }
+    .toggle-btn {
+        background: #edf2f7;
+        color: #4a5568;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 20px 0;
+        transition: background 0.2s;
+    }
+    .toggle-btn:hover {
+        background: #e2e8f0;
+    }
+    #paycheckBreakdown {
+        display: none;
+        margin-top: 20px;
+        animation: fadeIn 0.3s;
+    }
+    #paycheckBreakdown.show {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .content-section {
+        margin-bottom: 50px;
+    }
+    .content-section h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        color: #2d3748;
+    }
+    .content-section h3 {
+        font-size: 24px;
+        margin: 32px 0 16px;
+        color: #2d3748;
+    }
+    .content-section p {
+        margin-bottom: 16px;
+        color: #4a5568;
+        font-size: 16px;
+    }
+    .faq-item {
+        background: #fff;
+        border-radius: 10px;
+        padding: 24px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .faq-item h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: #2d3748;
+        margin-top: 0;
+    }
+    .faq-item p {
+        margin-bottom: 0;
+    }
+    footer {
+        background: #2d3748;
+        color: #cbd5e0;
+        padding: 50px 0 20px;
+        margin-top: 80px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    .footer-col h4 {
+        color: #fff;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+    .footer-col ul {
+        list-style: none;
+    }
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    .footer-col a {
+        color: #cbd5e0;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .footer-col a:hover {
+        color: #fff;
+    }
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #4a5568;
+        font-size: 14px;
+    }
+    .badge {
+        display: inline-block;
+        background: #edf2f7;
+        color: #667eea;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+    .info-box {
+        background: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 16px;
+        border-radius: 6px;
+        margin: 20px 0;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo">PaycheckCore</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/calculators">Calculators</a></li>
+                    <li><a href="/tax-guides">Tax Guides</a></li>
+                    <li><a href="/state-taxes">State Taxes</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>After Tax Salary Calculator 2026</h1>
+        <p>Calculate your take home pay after federal taxes, state taxes, FICA, Medicare, and pre-tax deductions. See your net pay by year, month, bi-weekly, and weekly.</p>
+    </div>
+</section>
+
+<section class="calculator-wrapper">
+    <div class="container">
+        <div class="card">
+            <div class="calculator-grid">
+                <div class="inputs-section">
+                    <h2 style="margin-bottom:24px;font-size:24px;">Enter Your Details</h2>
+                    <div class="form-group">
+                        <label for="grossSalary">Annual Gross Salary</label>
+                        <div class="input-prefix">
+                            <span>$</span>
+                            <input type="number" id="grossSalary" value="75000" min="0" step="1000">
+                        </div>
+                    <div class="form-group">
+                        <label for="filingStatus">Filing Status</label>
+                        <select id="filingStatus">
+                            <option value="single">Single</option>
+                            <option value="married">Married Filing Jointly</option>
+                            <option value="head">Head of Household</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state">
+                            <option value="al">Alabama</option>
+                            <option value="ak">Alaska</option>
+                            <option value="az">Arizona</option>
+                            <option value="ar">Arkansas</option>
+                            <option value="ca">California</option>
+                            <option value="co">Colorado</option>
+                            <option value="ct">Connecticut</option>
+                            <option value="de">Delaware</option>
+                            <option value="fl">Florida</option>
+                            <option value="ga">Georgia</option>
+                            <option value="hi">Hawaii</option>
+                            <option value="id">Idaho</option>
+                            <option value="il">Illinois</option>
+                            <option value="in">Indiana</option>
+                            <option value="ia">Iowa</option>
+                            <option value="ks">Kansas</option>
+                            <option value="ky">Kentucky</option>
+                            <option value="la">Louisiana</option>
+                            <option value="me">Maine</option>
+                            <option value="md">Maryland</option>
+                            <option value="ma">Massachusetts</option>
+                            <option value="mi">Michigan</option>
+                            <option value="mn">Minnesota</option>
+                            <option value="ms">Mississippi</option>
+                            <option value="mo">Missouri</option>
+                            <option value="mt">Montana</option>
+                            <option value="ne">Nebraska</option>
+                            <option value="nv">Nevada</option>
+                            <option value="nh">New Hampshire</option>
+                            <option value="nj">New Jersey</option>
+                            <option value="nm">New Mexico</option>
+                            <option value="ny">New York</option>
+                            <option value="nc">North Carolina</option>
+                            <option value="nd">North Dakota</option>
+                            <option value="oh">Ohio</option>
+                            <option value="ok">Oklahoma</option>
+                            <option value="or">Oregon</option>
+                            <option value="pa">Pennsylvania</option>
+                            <option value="ri">Rhode Island</option>
+                            <option value="sc">South Carolina</option>
+                            <option value="sd">South Dakota</option>
+                            <option value="tn">Tennessee</option>
+                            <option value="tx" selected>Texas</option>
+                            <option value="ut">Utah</option>
+                            <option value="vt">Vermont</option>
+                            <option value="va">Virginia</option>
+                            <option value="wa">Washington</option>
+                            <option value="wv">West Virginia</option>
+                            <option value="wi">Wisconsin</option>
+                            <option value="wy">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payFrequency">Pay Frequency</label>
+                        <select id="payFrequency">
+                            <option value="52">Weekly</option>
+                            <option value="26" selected>Bi-Weekly</option>
+                            <option value="24">Semi-Monthly</option>
+                            <option value="12">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="k401">Annual 401(k) Contribution <span class="badge">Pre-Tax</span></label>
+                        <div class="input-prefix">
+                            <span>$</span>
+                            <input type="number" id="k401" value="0" min="0" step="500">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hsa">Annual HSA Contribution <span class="badge">Pre-Tax</span></label>
+                        <div class="input-prefix">
+                            <span>$</span>
+                            <input type="number" id="hsa" value="0" min="0" step="100">
+                        </div>
+                    </div>
+                    <button class="btn" onclick="calculateTax()">Calculate Take Home Pay</button>
+                    <div class="info-box" style="margin-top:20px;">
+                        <strong>Note:</strong> Calculations use estimated 2026 federal tax brackets and standard deduction. State tax uses flat approximation. Consult a tax professional for personalized advice.
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h2>Your Results</h2>
+                    <div class="result-highlight">
+                        <div class="label">Annual Take Home Pay</div>
+                        <div class="value" id="annualNet">$0</div>
+                    </div>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="label">Monthly Net</div>
+                            <div class="value" id="monthlyNet">$0</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="label">Bi-Weekly Net</div>
+                            <div class="value" id="biweeklyNet">$0</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="label">Weekly Net</div>
+                            <div class="value" id="weeklyNet">$0</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="label">Per Paycheck</div>
+                            <div class="value" id="paycheckNet">$0</div>
+                        </div>
+                    </div>
+                    
+                    <div id="pieChart" class="pie-chart"></div>
+                    <div class="pie-legend" id="pieLegend"></div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th style="text-align:right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="breakdownTable">
+                            <tr><td>Gross Salary</td><td style="text-align:right">$0</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="result-item" style="margin:20px 0;">
+                        <div class="label">Effective Tax Rate</div>
+                        <div class="value" id="effectiveRate">0%</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="label">Marginal Tax Rate</div>
+                        <div class="value" id="marginalRate">0%</div>
+                    </div>
+
+                    <button class="toggle-btn" onclick="toggleBreakdown()">Show paycheck breakdown</button>
+                    <div id="paycheckBreakdown">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Per Paycheck</th>
+                                    <th style="text-align:right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paycheckTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="card content-section">
+        <h2>After Tax Salary Calculator: Understand Your True Take Home Pay</h2>
+        <p>An after tax salary calculator helps you determine your actual net pay after all deductions. Your gross salary is not what lands in your bank account. Federal income tax, state income tax, Social Security, Medicare, and pre-tax benefits like 401(k) and HSA contributions all reduce your take home pay. This salary after tax calculator uses 2026 tax data to provide accurate estimates of your net pay by year, month, bi-weekly, and weekly periods.</p>
+        
+        <h3>How to Calculate Salary After Tax</h3>
+        <p>Calculating take home pay involves several steps. Our net pay calculator automates this process, but understanding each component helps you optimize your finances:</p>
+        <p><strong>1. Start with Gross Annual Salary:</strong> This is your total compensation before any deductions. If you earn $75,000 per year, that is your gross salary.</p>
+        <p><strong>2. Subtract Pre-Tax Deductions:</strong> Contributions to traditional 401(k) plans, HSA accounts, and health insurance premiums reduce your taxable income. These deductions lower both federal and FICA taxes in most cases. For 2026, the 401(k) contribution limit is $23,500 for employees under 50, and HSA limits are $4,300 for individuals.</p>
+        <p><strong>3. Apply Standard or Itemized Deductions:</strong> For 2026, the standard deduction is estimated at $15,000 for single filers and $30,000 for married filing jointly. This amount is subtracted from your income before calculating federal income tax.</p>
+        <p><strong>4. Calculate Federal Income Tax:</strong> The U.S. uses progressive tax brackets. For 2026, single filers pay 10% on income up to $11,925, 12% from $11,925 to $48,475, 22% from $48,475 to $103,350, and so on. Your marginal tax rate is the rate on your last dollar earned, while your effective tax rate is your total tax divided by gross income.</p>
+        <p><strong>5. Calculate FICA Taxes:</strong> Social Security tax is 6.2% on wages up to $176,100 for 2026. Medicare tax is 1.45% on all wages, with an additional 0.9% on earnings above $200,000 for single filers. Your employer matches these amounts, but only your portion affects take home pay.</p>
+        <p><strong>6. Calculate State Income Tax:</strong> State tax rates vary widely. Nine states have no income tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. States like California have rates up to 13.3%, while Colorado uses a flat 4.4%. Our take home pay calculator includes state-specific estimates for all 50 states.</p>
+        <p><strong>7. Arrive at Net Pay:</strong> Subtract all taxes and deductions from gross pay to get your annual net pay. Divide by 12 for monthly, 26 for bi-weekly, or 52 for weekly take home pay.</p>
+
+        <h3>Federal Tax Brackets for 2026</h3>
+        <p>The IRS adjusts tax brackets annually for inflation. Here are the projected 2026 brackets for single and married filing jointly used in this after tax salary calculator:</p>
+        <table>
+            <thead>
+                <tr><th>Tax Rate</th><th>Single</th><th>Married Filing Jointly</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>10%</td><td>$0 to $11,925</td><td>$0 to $23,850</td></tr>
+                <tr><td>12%</td><td>$11,925 to $48,475</td><td>$23,850 to $96,950</td></tr>
+                <tr><td>22%</td><td>$48,475 to $103,350</td><td>$96,950 to $206,700</td></tr>
+                <tr><td>24%</td><td>$103,350 to $197,300</td><td>$206,700 to $394,600</td></tr>
+                <tr><td>32%</td><td>$197,300 to $250,525</td><td>$394,600 to $501,050</td></tr>
+                <tr><td>35%</td><td>$250,525 to $626,350</td><td>$501,050 to $751,600</td></tr>
+                <tr><td>37%</td><td>$626,350+</td><td>$751,600+</td></tr>
+            </tbody>
+        </table>
+
+        <h3>State Income Tax: How Location Affects Your Net Pay Calculator Results</h3>
+        <p>Where you live significantly impacts your salary after tax. A $100,000 salary in Texas with no state income tax yields more take home pay than the same salary in California. Here is how states compare:</p>
+        <p><strong>No Income Tax States:</strong> Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming. Living in these states means you only pay federal taxes and FICA on your wages.</p>
+        <p><strong>Flat Tax States:</strong> Colorado at 4.4%, Illinois at 4.95%, Indiana at 3.15%, Kentucky at 4%, Massachusetts at 5%, Michigan at 4.25%, North Carolina at 4.5%, Pennsylvania at 3.07%, and Utah at 4.65% apply one rate to all income levels.</p>
+        <p><strong>Progressive Tax States:</strong> California, New York, New Jersey, Oregon, Minnesota, and others use graduated brackets similar to federal taxes. High earners pay much higher rates in these states.</p>
+        <p>The after tax salary calculator on this page includes simplified state tax estimates. Actual state calculations may include local taxes, credits, and deductions not shown here. Always verify with your state tax authority.</p>
+
+        <h3>Understanding FICA: Social Security and Medicare Taxes</h3>
+        <p>FICA stands for Federal Insurance Contributions Act. It funds Social Security and Medicare programs. All W-2 employees pay FICA taxes regardless of filing status or deductions:</p>
+        <p><strong>Social Security Tax:</strong> 6.2% of wages up to the annual wage base limit. For 2026, the limit is projected at $176,100. You pay no Social Security tax on earnings above this threshold. If you earn $200,000, you pay 6.2% on the first $176,100 only, totaling $10,918.20.</p>
+        <p><strong>Medicare Tax:</strong> 1.45% on all wages with no cap. High earners pay an Additional Medicare Tax of 0.9% on wages above $200,000 for single filers or $250,000 for married couples. Unlike Social Security, Medicare tax applies to every dollar earned.</p>
+        <p>Self-employed individuals pay both employee and employer portions, totaling 15.3% for FICA. However, they can deduct the employer portion when calculating income tax.</p>
+
+        <h3>Pre-Tax Deductions That Increase Take Home Pay</h3>
+        <p>Not all deductions are equal. Pre-tax deductions reduce your taxable income and FICA wages, giving you a double tax benefit. Here are common pre-tax options to maximize your net pay:</p>
+        <p><strong>401(k) and 403(b) Contributions:</strong> Traditional retirement accounts let you defer taxes until retirement. For 2026, you can contribute up to $23,500, or $31,000 if age 50 or older. Contributing $10,000 to a 401(k) could save $2,200 in federal tax if you are in the 22% bracket, plus FICA savings.</p>
+        <p><strong>HSA Contributions:</strong> Health Savings Accounts offer triple tax advantages: deductible contributions, tax-free growth, and tax-free withdrawals for medical expenses. 2026 limits are $4,300 for individual coverage and $8,550 for families, plus $1,000 catch-up for age 55+.</p>
+        <p><strong>Health Insurance Premiums:</strong> Most employer health, dental, and vision premiums are deducted pre-tax under Section 125 cafeteria plans. A $400 monthly premium costs only $248 after tax if you are in the 24% federal bracket and pay 6.2% FICA plus 1.45% Medicare.</p>
+        <p><strong>FSA Contributions:</strong> Flexible Spending Accounts for healthcare or dependent care use pre-tax dollars. Healthcare FSA limit for 2026 is estimated at $3,300.</p>
+        <p>The take home pay calculator above accounts for 401(k) and HSA contributions. Enter your annual amounts to see how pre-tax benefits increase your net pay.</p>
+
+        <h3>Bi-Weekly vs Semi-Monthly Pay: Impact on Your Paycheck</h3>
+        <p>Pay frequency affects your paycheck amount but not your annual take home pay. Understanding the difference helps with budgeting:</p>
+        <p><strong>Weekly:</strong> 52 paychecks per year. If your annual net pay is $52,000, you receive $1,000 each week.</p>
+        <p><strong>Bi-Weekly:</strong> 26 paychecks per year, every two weeks. Same $52,000 net pay equals $2,000 per paycheck. Two months per year include three paychecks instead of two.</p>
+        <p><strong>Semi-Monthly:</strong> 24 paychecks per year, typically on 15th and last day of month. $52,000 net pay equals $2,166.67 per paycheck.</p>
+        <p><strong>Monthly:</strong> 12 paychecks per year. $52,000 net pay equals $4,333.33 per paycheck.</p>
+        <p>Our salary after tax calculator lets you select your pay frequency to see exact paycheck amounts after all taxes.</p>
+
+        <h3>How Bonuses and Overtime Are Taxed</h3>
+        <p>Supplemental wages like bonuses, commissions, and overtime are subject to special withholding rules. The IRS offers two methods:</p>
+        <p><strong>Percentage Method:</strong> Flat 22% federal withholding for supplemental wages up to $1 million. Amounts above $1 million use 37%.</p>
+        <p><strong>Aggregate Method:</strong> Your employer adds the bonus to your regular wages and withholds based on total income for that pay period. This can push you into a higher bracket temporarily.</p>
+        <p>Neither method changes your actual annual tax liability. If too much is withheld, you receive a refund when you file. If too little is withheld, you may owe. Use the after tax salary calculator to estimate your regular pay, then manually adjust for bonuses.</p>
+    </div>
+
+    <div class="card content-section">
+        <h2>Frequently Asked Questions About After Tax Salary</h2>
+        <div class="faq-item">
+            <h3>1. What is the difference between gross pay and net pay?</h3>
+            <p>Gross pay is your total earnings before any deductions. This includes your salary, hourly wages, bonuses, and commissions. Net pay, also called take home pay, is what remains after subtracting federal income tax, state income tax, Social Security, Medicare, and any pre-tax or post-tax deductions like 401(k), health insurance, or garnishments. The after tax salary calculator shows both amounts so you know exactly what hits your bank account.</p>
+        </div>
+        <div class="faq-item">
+            <h3>2. How accurate is this take home pay calculator?</h3>
+            <p>This salary after tax calculator uses 2026 federal tax brackets, standard deductions, and FICA rates from IRS publications and estimates. State taxes use simplified flat rates or graduated approximations. The calculator provides estimates for planning purposes. Your actual paycheck may differ due to local taxes, specific employer deductions, voluntary benefits, garnishments, or other factors. For precise withholding, use the IRS Tax Withholding Estimator or consult a tax professional.</p>
+        </div>
+        <div class="faq-item">
+            <h3>3. Why is my paycheck less than what the calculator shows?</h3>
+            <p>Several factors can cause differences. The net pay calculator does not include health insurance premiums, dental or vision coverage, life insurance, disability insurance, union dues, 401(k) loan repayments, wage garnishments, or local city and county taxes. It also assumes you take the standard deduction rather than itemizing. If your W-4 claims additional allowances or extra withholding, your actual paycheck will vary from the estimate.</p>
+        </div>
+        <div class="faq-item">
+            <h3>4. How does moving to another state affect my take home pay?</h3>
+            <p>State income tax has a major impact on your net pay. If you move from a high-tax state like California or New York to a no-tax state like Texas or Florida, you could increase your take home pay by 5-13% without a raise. For a $100,000 salary, that is $5,000 to $13,000 more annually. Use the after tax salary calculator to compare states by changing the state dropdown. Remember that cost of living and property taxes also factor into your overall budget.</p>
+        </div>
+        <div class="faq-item">
+            <h3>5. What is my effective tax rate vs marginal tax rate?</h3>
+            <p>Your marginal tax rate is the tax rate on your last dollar of income based on tax brackets. If you are single and earn $75,000, your marginal rate is 22% because $75,000 falls in the 22% bracket. Your effective tax rate is your total tax divided by gross income. If you pay $10,500 in federal tax on $75,000 income, your effective rate is 14%. The effective rate is always lower than the marginal rate because of the progressive tax system. This calculator displays both rates.</p>
+        </div>
+        <div class="faq-item">
+            <h3>6. Do 401k contributions reduce my take home pay?</h3>
+            <p>Yes, but less than you think. 401(k) contributions are pre-tax, meaning they reduce your taxable income and avoid FICA taxes. If you contribute $500 per month and are in the 22% tax bracket, your paycheck only decreases by about $340 because you save $110 in federal tax and $38 in FICA. The after tax salary calculator includes 401(k) input so you can see the true impact on net pay. Maximizing pre-tax contributions is one of the best ways to lower your taxable income.</p>
+        </div>
+        <div class="faq-item">
+            <h3>7. How are bonuses taxed differently than regular salary?</h3>
+            <p>Bonuses are considered supplemental wages and may have 22% federal tax withheld regardless of your tax bracket. This is called the percentage method. However, your actual tax rate on the bonus depends on your total annual income. If your effective rate is 18%, the excess 4% withheld on the bonus comes back as a tax refund. Alternatively, employers can use the aggregate method which combines the bonus with regular wages for withholding. Your total tax liability remains the same either way.</p>
+        </div>
+        <div class="faq-item">
+            <h3>8. What is FICA on my paycheck?</h3>
+            <p>FICA stands for Federal Insurance Contributions Act. It includes Social Security tax at 6.2% on wages up to $176,100 for 2026, and Medicare tax at 1.45% on all wages. High earners pay an additional 0.9% Medicare tax on income over $200,000 for singles. Your employer matches these amounts. FICA funds retirement benefits and healthcare for seniors. Unlike federal income tax, there are no deductions or exemptions from FICA unless you contribute to certain pre-tax benefits.</p>
+        </div>
+        <div class="faq-item">
+            <h3>9. Should I choose bi-weekly or semi-monthly pay?</h3>
+            <p>Most employers set pay frequency and employees cannot choose. Bi-weekly means 26 paychecks per year where you get paid every two weeks. Semi-monthly means 24 paychecks, usually on 1st and 15th. Bi-weekly pay results in smaller individual checks but two months per year have three paychecks, which helps with budgeting or extra debt payments. Semi-monthly provides consistent twice-monthly pay aligned with monthly bills. Your annual take home pay is identical regardless of frequency. The calculator shows all pay period options.</p>
+        </div>
+        <div class="faq-item">
+            <h3>10. When will I receive my tax refund if too much is withheld?</h3>
+            <p>If your employer withholds more tax than you owe, you receive a refund after filing your annual tax return. For 2026 taxes, you file in early 2027, typically between January and April 15. E-filing with direct deposit usually delivers refunds within 21 days. You can adjust your W-4 with your employer to reduce withholding and increase take home pay throughout the year instead of waiting for a large refund. Use the salary after tax calculator to estimate your correct withholding and avoid overpaying.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PaycheckCore</h4>
+                <p style="font-size:14px;line-height:1.7;">Free financial calculators and tax tools to help you understand your paycheck, plan your budget, and maximize take home pay.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Calculators</h4>
+                <ul>
+                    <li><a href="/after-tax-salary-calculator">After Tax Salary Calculator</a></li>
+                    <li><a href="/hourly-to-salary">Hourly to Salary Calculator</a></li>
+                    <li><a href="/tax-bracket-calculator">Tax Bracket Calculator</a></li>
+                    <li><a href="/401k-calculator">401k Calculator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/tax-guides">2026 Tax Guides</a></li>
+                    <li><a href="/state-tax-rates">State Tax Rates</a></li>
+                    <li><a href="/w4-guide">W-4 Form Guide</a></li>
+                    <li><a href="/blog">Financial Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PaycheckCore.com. All rights reserved. This calculator is for educational purposes only and does not constitute financial or tax advice.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between gross pay and net pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross pay is your total earnings before any deductions including salary, wages, bonuses, and commissions. Net pay, also called take home pay, is what remains after subtracting federal income tax, state income tax, Social Security, Medicare, and any pre-tax or post-tax deductions like 401(k), health insurance, or garnishments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this take home pay calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This salary after tax calculator uses 2026 federal tax brackets, standard deductions, and FICA rates from IRS publications and estimates. State taxes use simplified rates. The calculator provides estimates for planning purposes. Your actual paycheck may differ due to local taxes, specific employer deductions, or other factors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my paycheck less than what the calculator shows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The net pay calculator does not include health insurance premiums, dental or vision coverage, life insurance, disability insurance, union dues, 401(k) loan repayments, wage garnishments, or local city and county taxes. It also assumes you take the standard deduction rather than itemizing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does moving to another state affect my take home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "State income tax has a major impact on your net pay. If you move from a high-tax state like California or New York to a no-tax state like Texas or Florida, you could increase your take home pay by 5-13% without a raise. For a $100,000 salary, that is $5,000 to $13,000 more annually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is my effective tax rate vs marginal tax rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your marginal tax rate is the tax rate on your last dollar of income based on tax brackets. Your effective tax rate is your total tax divided by gross income. The effective rate is always lower than the marginal rate because of the progressive tax system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do 401k contributions reduce my take home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but less than you think. 401(k) contributions are pre-tax, meaning they reduce your taxable income and avoid FICA taxes. If you contribute $500 per month and are in the 22% tax bracket, your paycheck only decreases by about $340 because you save $110 in federal tax and $38 in FICA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are bonuses taxed differently than regular salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bonuses are considered supplemental wages and may have 22% federal tax withheld regardless of your tax bracket. However, your actual tax rate on the bonus depends on your total annual income. If your effective rate is 18%, the excess 4% withheld on the bonus comes back as a tax refund."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is FICA on my paycheck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FICA stands for Federal Insurance Contributions Act. It includes Social Security tax at 6.2% on wages up to $176,100 for 2026, and Medicare tax at 1.45% on all wages. High earners pay an additional 0.9% Medicare tax on income over $200,000 for singles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose bi-weekly or semi-monthly pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most employers set pay frequency and employees cannot choose. Bi-weekly means 26 paychecks per year. Semi-monthly means 24 paychecks. Bi-weekly pay results in smaller individual checks but two months per year have three paychecks. Your annual take home pay is identical regardless of frequency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I receive my tax refund if too much is withheld?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your employer withholds more tax than you owe, you receive a refund after filing your annual tax return. For 2026 taxes, you file in early 2027, typically between January and April 15. E-filing with direct deposit usually delivers refunds within 21 days."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+    const taxBrackets2026 = {
+        single: [
+            { min: 0, max: 11925, rate: 0.10 },
+            { min: 11925, max: 48475, rate: 0.12 },
+            { min: 48475, max: 103350, rate: 0.22 },
+            { min: 103350, max: 197300, rate: 0.24 },
+            { min: 197300, max: 250525, rate: 0.32 },
+            { min: 250525, max: 626350, rate: 0.35 },
+            { min: 626350, max: Infinity, rate: 0.37 }
+        ],
+        married: [
+            { min: 0, max: 23850, rate: 0.10 },
+            { min: 23850, max: 96950, rate: 0.12 },
+            { min: 96950, max: 206700, rate: 0.22 },
+            { min: 206700, max: 394600, rate: 0.24 },
+            { min: 394600, max: 501050, rate: 0.32 },
+            { min: 501050, max: 751600, rate: 0.35 },
+            { min: 751600, max: Infinity, rate: 0.37 }
+        ],
+        head: [
+            { min: 0, max: 17000, rate: 0.10 },
+            { min: 17000, max: 64800, rate: 0.12 },
+            { min: 64800, max: 103350, rate: 0.22 },
+            { min: 103350, max: 197300, rate: 0.24 },
+            { min: 197300, max: 250500, rate: 0.32 },
+            { min: 250500, max: 626350, rate: 0.35 },
+            { min: 626350, max: Infinity, rate: 0.37 }
+        ]
+    };
+
+    const standardDeduction2026 = {
+        single: 15000,
+        married: 30000,
+        head: 22500
+    };
+
+    const stateTaxRates = {
+        al: 0.05, ak: 0, az: 0.025, ar: 0.049, ca: 0.093, co: 0.044, ct: 0.05, de: 0.066,
+        fl: 0, ga: 0.0549, hi: 0.0825, id: 0.058, il: 0.0495, in: 0.0315, ia: 0.06,
+        ks: 0.057, ky: 0.04, la: 0.0425, me: 0.0715, md: 0.0575, ma: 0.05, mi: 0.0425,
+        mn: 0.0785, ms: 0.05, mo: 0.048, mt: 0.0675, ne: 0.0584, nv: 0, nh: 0, nj: 0.0637,
+        nm: 0.049, ny: 0.065, nc: 0.045, nd: 0.029, oh: 0.0399, ok: 0.0475, or: 0.09,
+        pa: 0.0307, ri: 0.0599, sc: 0.065, sd: 0, tn: 0, tx: 0, ut: 0.0465, vt: 0.0875,
+        va: 0.0575, wa: 0, wv: 0.062, wi: 0.0765, wy: 0
+    };
+
+    const SS_WAGE_BASE_2026 = 176100;
+    const SS_RATE = 0.062;
+    const MEDICARE_RATE = 0.0145;
+    const ADDITIONAL_MEDICARE_RATE = 0.009;
+    const ADDITIONAL_MEDICARE_THRESHOLD_SINGLE = 200000;
+    const ADDITIONAL_MEDICARE_THRESHOLD_MARRIED = 250000;
+
+    function calculateFederalTax(taxableIncome, filingStatus) {
+        const brackets = taxBrackets2026[filingStatus];
+        let tax = 0;
+        let marginalRate = 0;
+        
+        for (let i = 0; i < brackets.length; i++) {
+            const bracket = brackets[i];
+            if (taxableIncome > bracket.min) {
+                const taxableInBracket = Math.min(taxableIncome, bracket.max) - bracket.min;
+                tax += taxableInBracket * bracket.rate;
+                if (taxableIncome > bracket.min) {
+                    marginalRate = bracket.rate;
+                }
+            }
+        }
+        return { tax: tax, marginalRate: marginalRate };
+    }
+
+    function calculateFICA(gross, filingStatus) {
+        const ssTax = Math.min(gross, SS_WAGE_BASE_2026) * SS_RATE;
+        let medicareTax = gross * MEDICARE_RATE;
+        
+        const threshold = filingStatus === 'married' ? ADDITIONAL_MEDICARE_THRESHOLD_MARRIED : ADDITIONAL_MEDICARE_THRESHOLD_SINGLE;
+        if (gross > threshold) {
+            medicareTax += (gross - threshold) * ADDITIONAL_MEDICARE_RATE;
+        }
+        
+        return { ssTax: ssTax, medicareTax: medicareTax, totalFica: ssTax + medicareTax };
+    }
+
+    function formatCurrency(num) {
+        return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    function formatPercent(num) {
+        return (num * 100).toFixed(1) + '%';
+    }
+
+    function calculateTax() {
+        const gross = parseFloat(document.getElementById('grossSalary').value) || 0;
+        const filingStatus = document.getElementById('filingStatus').value;
+        const state = document.getElementById('state').value;
+        const payFreq = parseInt(document.getElementById('payFrequency').value);
+        const k401 = parseFloat(document.getElementById('k401').value) || 0;
+        const hsa = parseFloat(document.getElementById('hsa').value) || 0;
+
+        const preTaxDeductions = k401 + hsa;
+        const w2Wages = gross - preTaxDeductions;
+        const standardDed = standardDeduction2026[filingStatus];
+        const taxableIncome = Math.max(0, w2Wages - standardDed);
+        
+        const fedResult = calculateFederalTax(taxableIncome, filingStatus);
+        const federalTax = fedResult.tax;
+        const marginalRate = fedResult.marginalRate;
+        
+        const ficaResult = calculateFICA(w2Wages, filingStatus);
+        const stateTax = w2Wages * stateTaxRates[state];
+        
+        const totalTax = federalTax + ficaResult.totalFica + stateTax;
+        const netPay = gross - totalTax - preTaxDeductions;
+        
+        const effectiveRate = gross > 0 ? totalTax / gross : 0;
+
+        document.getElementById('annualNet').textContent = formatCurrency(netPay);
+        document.getElementById('monthlyNet').textContent = formatCurrency(netPay / 12);
+        document.getElementById('biweeklyNet').textContent = formatCurrency(netPay / 26);
+        document.getElementById('weeklyNet').textContent = formatCurrency(netPay / 52);
+        document.getElementById('paycheckNet').textContent = formatCurrency(netPay / payFreq);
+        document.getElementById('effectiveRate').textContent = formatPercent(effectiveRate);
+        document.getElementById('marginalRate').textContent = formatPercent(marginalRate);
+
+        const tableBody = document.getElementById('breakdownTable');
+        tableBody.innerHTML = `
+            <tr><td>Gross Annual Salary</td><td style="text-align:right">${formatCurrency(gross)}</td></tr>
+            <tr><td>401(k) Contribution</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(k401)}</td></tr>
+            <tr><td>HSA Contribution</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(hsa)}</td></tr>
+            <tr><td><strong>Taxable Wages</strong></td><td style="text-align:right"><strong>${formatCurrency(w2Wages)}</strong></td></tr>
+            <tr><td>Federal Income Tax</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(federalTax)}</td></tr>
+            <tr><td>State Income Tax</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(stateTax)}</td></tr>
+            <tr><td>Social Security (6.2%)</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(ficaResult.ssTax)}</td></tr>
+            <tr><td>Medicare (1.45%)</td><td style="text-align:right;color:#e53e3e">-${formatCurrency(ficaResult.medicareTax)}</td></tr>
+            <tr style="background:#f7fafc;"><td><strong>Annual Take Home Pay</strong></td><td style="text-align:right;color:#38a169"><strong>${formatCurrency(netPay)}</strong></td></tr>
+        `;
+
+        const paycheckBody = document.getElementById('paycheckTable');
+        paycheckBody.innerHTML = `
+            <tr><td>Gross Pay</td><td style="text-align:right">${formatCurrency(gross / payFreq)}</td></tr>
+            <tr><td>401(k)</td><td style="text-align:right">-${formatCurrency(k401 / payFreq)}</td></tr>
+            <tr><td>HSA</td><td style="text-align:right">-${formatCurrency(hsa / payFreq)}</td></tr>
+            <tr><td>Federal Tax</td><td style="text-align:right">-${formatCurrency(federalTax / payFreq)}</td></tr>
+            <tr><td>State Tax</td><td style="text-align:right">-${formatCurrency(stateTax / payFreq)}</td></tr>
+            <tr><td>Social Security</td><td style="text-align:right">-${formatCurrency(ficaResult.ssTax / payFreq)}</td></tr>
+            <tr><td>Medicare</td><td style="text-align:right">-${formatCurrency(ficaResult.medicareTax / payFreq)}</td></tr>
+            <tr style="background:#f7fafc;"><td><strong>Net Paycheck</strong></td><td style="text-align:right;color:#38a169"><strong>${formatCurrency(netPay / payFreq)}</strong></td></tr>
+        `;
+
+        updatePieChart(netPay, federalTax, stateTax, ficaResult.totalFica, preTaxDeductions);
+    }
+
+    function updatePieChart(net, fed, state, fica, pretax) {
+        const total = net + fed + state + fica + pretax;
+        if (total === 0) return;
+        
+        const netPct = (net / total * 100);
+        const fedPct = (fed / total * 100);
+        const statePct = (state / total * 100);
+        const ficaPct = (fica / total * 100);
+        const pretaxPct = (pretax / total * 100);
+        
+        let cumulative = 0;
+        const segments = [
+            { color: '#667eea', pct: netPct, start: cumulative },
+            { color: '#e53e3e', pct: fedPct, start: cumulative += netPct },
+            { color: '#dd6b20', pct: statePct, start: cumulative += fedPct },
+            { color: '#d69e2e', pct: ficaPct, start: cumulative += statePct },
+            { color: '#38a169', pct: pretaxPct, start: cumulative += ficaPct }
+        ];
+        
+        const gradient = segments.map(s => 
+            `${s.color} ${s.start}% ${s.start + s.pct}%`
+        ).join(', ');
+        
+        document.getElementById('pieChart').style.background = `conic-gradient(${gradient})`;
+        
+        document.getElementById('pieLegend').innerHTML = `
+            <div class="legend-item"><div class="legend-color" style="background:#667eea"></div>Take Home: ${formatCurrency(net)} (${netPct.toFixed(1)}%)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#e53e3e"></div>Federal Tax: ${formatCurrency(fed)} (${fedPct.toFixed(1)}%)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#dd6b20"></div>State Tax: ${formatCurrency(state)} (${statePct.toFixed(1)}%)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#d69e2e"></div>FICA: ${formatCurrency(fica)} (${ficaPct.toFixed(1)}%)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#38a169"></div>Pre-Tax: ${formatCurrency(pretax)} (${pretaxPct.toFixed(1)}%)</div>
+        `;
+    }
+
+    function toggleBreakdown() {
+        const breakdown = document.getElementById('paycheckBreakdown');
+        const btn = event.target;
+        breakdown.classList.toggle('show');
+        btn.textContent = breakdown.classList.contains('show') ? 'Hide paycheck breakdown' : 'Show paycheck breakdown';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        calculateTax();
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('input', () => {
+                if (el.id !== 'payFrequency') calculateTax();
+            });
+            el.addEventListener('change', calculateTax);
+        });
+    });
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</div>
+</body>
+</html>

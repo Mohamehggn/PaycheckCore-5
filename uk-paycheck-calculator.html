@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDKHR4R06"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FTDKHR4R06');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9810476704160902"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-9810476704160902">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Take-Home Pay Calculator 2025/26 - NI & Scotland Tax | PaycheckCore</title>
+<meta name="description" content="Accurate UK take-home pay calculator for 2025/26 tax year. Calculate your net salary after Income Tax, National Insurance, pension & student loan. Supports England, Wales, Scotland & NI tax bands.">
+<meta name="keywords" content="UK take home pay calculator, net salary calculator 2025, NI calculator, Scotland tax calculator, student loan repayment calculator, UK tax code calculator">
+<link rel="canonical" href="https://paycheckcore.example.com/uk-take-home-pay-calculator">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root {
+        --pc-primary: #2563eb;
+        --pc-primary-dark: #1e40af;
+        --pc-accent: #10b981;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+    .gradient-text {
+        background: linear-gradient(90deg, #2563eb 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .input-focus:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        border-color: var(--pc-primary);
+    }
+    .result-card {
+        transition: all 0.3s ease;
+        transform: translateY(0);
+    }
+    .result-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+    .seo-content h2 {
+        scroll-margin-top: 100px;
+    }
+    .seo-content h3 {
+        scroll-margin-top: 100px;
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "UK Take-Home Pay Calculator 2025/26",
+  "url": "https://paycheckcore.example.com/uk-take-home-pay-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Calculate your UK take-home pay for 2025/26 after Income Tax, National Insurance, pension contributions, and student loan repayments. Includes Scotland tax bands.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "PaycheckCore",
+    "url": "https://paycheckcore.example.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What are the UK Income Tax bands for 2025/26?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For England, Wales & Northern Ireland: Personal Allowance £0-£12,570 at 0%, Basic Rate £12,571-£50,270 at 20%, Higher Rate £50,271-£125,140 at 40%, Additional Rate over £125,140 at 45%. Scotland has six bands: Starter 19%, Basic 20%, Intermediate 21%, Higher 42%, Advanced 45%, Top 48%."
+    }
+  },{
+    "@type": "Question",
+    "name": "How is National Insurance calculated in 2025/26?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Class 1 NI for employees is 8% on earnings between £12,570 and £50,270, and 2% on earnings above £50,270 for the 2025/26 tax year."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is a UK tax code and how does it affect my pay?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A tax code tells your employer how much Income Tax to deduct. 1257L is the standard code for 2025/26, meaning you get £12,570 tax-free Personal Allowance. Codes with 'BR', 'D0', or 'D1' tax all income at flat rates."
+    }
+  }]
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span class="text-xl font-bold text-slate-900">PaycheckCore</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="#calculator" class="hover:text-blue-600 transition">Calculator</a>
+                <a href="#how-it-works" class="hover:text-blue-600 transition">How It Works</a>
+                <a href="#tax-guide" class="hover:text-blue-600 transition">Tax Guide</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-slate-600 hover:bg-slate-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+        <div class="px-4 py-3 space-y-2">
+            <a href="#calculator" class="block py-2 text-slate-700 hover:text-blue-600">Calculator</a>
+            <a href="#how-it-works" class="block py-2 text-slate-700 hover:text-blue-600">How It Works</a>
+            <a href="#tax-guide" class="block py-2 text-slate-700 hover:text-blue-600">Tax Guide</a>
+            <a href="#faq" class="block py-2 text-slate-700 hover:text-blue-600">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="bg-gradient-to-br from-blue-50 via-white to-emerald-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    UK Take-Home Pay Calculator <span class="gradient-text">2025/26</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-8">
+                    Instantly calculate your net salary after Income Tax, National Insurance, pension, and student loan. Accurate for England, Wales, Scotland & Northern Ireland.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-700">
+                    <div class="flex items-center gap-2"><svg class="h-5 w-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>2025/26 Tax Bands</div>
+                    <div class="flex items-center gap-2"><svg class="h-5 w-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Scotland Rates Included</div>
+                    <div class="flex items-center gap-2"><svg class="h-5 w-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Student Loans 1,2,4,5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 lg:p-8 sticky top-24">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6">Your Income Details</h2>
+                        <form id="salary-form" class="space-y-5">
+                            <div>
+                                <label for="grossSalary" class="block text-sm font-medium text-slate-700 mb-1.5">Gross Annual Salary (GBP)</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500">£</span>
+                                    <input type="number" id="grossSalary" value="40000" min="0" step="100" class="w-full pl-7 pr-4 py-2.5 border border-slate-300 rounded-lg input-focus" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="taxCode" class="block text-sm font-medium text-slate-700 mb-1.5">Tax Code</label>
+                                <input type="text" id="taxCode" value="1257L" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg input-focus" placeholder="e.g. 1257L">
+                                <p class="text-xs text-slate-500 mt-1">Standard code is 1257L for 2025/26. BR, D0, D1 codes supported.</p>
+                            </div>
+                            <div>
+                                <label for="region" class="block text-sm font-medium text-slate-700 mb-1.5">Region</label>
+                                <select id="region" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg input-focus bg-white">
+                                    <option value="rUK">England / Wales / Northern Ireland</option>
+                                    <option value="scotland">Scotland</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="pension" class="block text-sm font-medium text-slate-700 mb-1.5">Pension Contribution %</label>
+                                <div class="relative">
+                                    <input type="number" id="pension" value="5" min="0" max="100" step="0.1" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg input-focus">
+                                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-500">%</span>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-1">Salary sacrifice / net pay arrangement.</p>
+                            </div>
+                            <div>
+                                <label for="studentLoan" class="block text-sm font-medium text-slate-700 mb-1.5">Student Loan Plan</label>
+                                <select id="studentLoan" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg input-focus bg-white">
+                                    <option value="none">No Student Loan</option>
+                                    <option value="plan1">Plan 1 (Pre-2012)</option>
+                                    <option value="plan2">Plan 2 (Post-2012)</option>
+                                    <option value="plan4">Plan 4 (Scotland)</option>
+                                    <option value="plan5">Plan 5 (2023+ England)</option>
+                                    <option value="pgl">Postgraduate Loan</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 shadow-md hover:shadow-lg">
+                                Calculate Take-Home Pay
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <div id="results" class="space-y-6 animate-fade-in-up">
+                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl shadow-xl text-white p-6 lg:p-8 result-card">
+                            <p class="text-blue-100 text-sm font-medium mb-1">Your Monthly Take-Home Pay</p>
+                            <p class="text-4xl lg:text-5xl font-extrabold mb-2" id="monthlyTakeHome">£2,587.33</p>
+                            <p class="text-blue-100 text-sm">Equivalent to <span class="font-semibold" id="annualTakeHome">£31,048.00</span> per year or <span class="font-semibold" id="weeklyTakeHome">£597.08</span> per week</p>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl shadow-md border border-slate-200 p-5 result-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <p class="text-sm font-medium text-slate-600">Income Tax</p>
+                                    <span class="h-2 w-2 rounded-full bg-red-500"></span>
+                                </div>
+                                <p class="text-2xl font-bold text-slate-900" id="annualTax">£5,492.00</p>
+                                <p class="text-sm text-slate-500" id="monthlyTax">£457.67 / month</p>
+                            </div>
+                            <div class="bg-white rounded-xl shadow-md border border-slate-200 p-5 result-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <p class="text-sm font-medium text-slate-600">National Insurance</p>
+                                    <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+                                </div>
+                                <p class="text-2xl font-bold text-slate-900" id="annualNI">£1,460.00</p>
+                                <p class="text-sm text-slate-500" id="monthlyNI">£121.67 / month</p>
+                            </div>
+                            <div class="bg-white rounded-xl shadow-md border border-slate-200 p-5 result-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <p class="text-sm font-medium text-slate-600">Pension</p>
+                                    <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                                </div>
+                                <p class="text-2xl font-bold text-slate-900" id="annualPension">£2,000.00</p>
+                                <p class="text-sm text-slate-500" id="monthlyPension">£166.67 / month</p>
+                            </div>
+                            <div class="bg-white rounded-xl shadow-md border border-slate-200 p-5 result-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <p class="text-sm font-medium text-slate-600">Student Loan</p>
+                                    <span class="h-2 w-2 rounded-full bg-purple-500"></span>
+                                </div>
+                                <p class="text-2xl font-bold text-slate-900" id="annualSL">£0.00</p>
+                                <p class="text-sm text-slate-500" id="monthlySL">£0.00 / month</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6">
+                            <h3 class="text-lg font-bold text-slate-900 mb-4">Breakdown by Pay Period</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead>
+                                        <tr class="border-b border-slate-200 text-left text-slate-600">
+                                            <th class="pb-3 font-semibold">Description</th>
+                                            <th class="pb-3 font-semibold text-right">Annual</th>
+                                            <th class="pb-3 font-semibold text-right">Monthly</th>
+                                            <th class="pb-3 font-semibold text-right">Weekly</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr>
+                                            <td class="py-3 text-slate-700">Gross Pay</td>
+                                            <td class="py-3 text-right font-medium" id="tableGrossAnnual">£40,000.00</td>
+                                            <td class="py-3 text-right font-medium" id="tableGrossMonthly">£3,333.33</td>
+                                            <td class="py-3 text-right font-medium" id="tableGrossWeekly">£769.23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-slate-700">Income Tax</td>
+                                            <td class="py-3 text-right text-red-600" id="tableTaxAnnual">-£5,492.00</td>
+                                            <td class="py-3 text-right text-red-600" id="tableTaxMonthly">-£457.67</td>
+                                            <td class="py-3 text-right text-red-600" id="tableTaxWeekly">-£105.62</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-slate-700">NI Contribution</td>
+                                            <td class="py-3 text-right text-amber-600" id="tableNIAnnual">-£1,460.00</td>
+                                            <td class="py-3 text-right text-amber-600" id="tableNIMonthly">-£121.67</td>
+                                            <td class="py-3 text-right text-amber-600" id="tableNIWeekly">-£28.08</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-slate-700">Pension</td>
+                                            <td class="py-3 text-right text-emerald-600" id="tablePensionAnnual">-£2,000.00</td>
+                                            <td class="py-3 text-right text-emerald-600" id="tablePensionMonthly">-£166.67</td>
+                                            <td class="py-3 text-right text-emerald-600" id="tablePensionWeekly">-£38.46</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-slate-700">Student Loan</td>
+                                            <td class="py-3 text-right text-purple-600" id="tableSLAnnual">£0.00</td>
+                                            <td class="py-3 text-right text-purple-600" id="tableSLMonthly">£0.00</td>
+                                            <td class="py-3 text-right text-purple-600" id="tableSLWeekly">£0.00</td>
+                                        </tr>
+                                        <tr class="bg-slate-50 font-bold">
+                                            <td class="py-3 text-slate-900">Net Take-Home Pay</td>
+                                            <td class="py-3 text-right text-blue-600" id="tableNetAnnual">£31,048.00</td>
+                                            <td class="py-3 text-right text-blue-600" id="tableNetMonthly">£2,587.33</td>
+                                            <td class="py-3 text-right text-blue-600" id="tableNetWeekly">£597.08</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-12 lg:py-16 bg-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">How This Calculator Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Enter Your Details</h3>
+                    <p class="text-slate-600 text-sm">Input your gross salary, tax code, region, pension % and student loan plan. All calculations use 2025/26 tax rules.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-emerald-600">2</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">We Calculate Deductions</h3>
+                    <p class="text-slate-600 text-sm">PAYE Income Tax, Class 1 National Insurance, pension salary sacrifice, and student loan repayments are deducted.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Get Your Net Pay</h3>
+                    <p class="text-slate-600 text-sm">See your annual, monthly and weekly take-home pay with full breakdown of all deductions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tax-guide" class="py-12 lg:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 seo-content">
+            <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">Complete Guide to UK Tax, National Insurance & Take-Home Pay 2025/26</h2>
+            <p class="text-lg text-slate-600 mb-8">Understanding how your salary is taxed in the UK is essential for financial planning. The 2025/26 tax year runs from 6 April 2025 to 5 April 2026. Your take-home pay is your gross salary minus deductions for Income Tax, National Insurance, pension contributions, and student loan repayments. This guide explains every aspect of the UK PAYE system for employees in England, Wales, Scotland, and Northern Ireland.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">UK Income Tax Bands 2025/26 Explained</h3>
+            <p class="text-slate-700 mb-4">Income Tax is calculated using a progressive system where different portions of your income are taxed at different rates. The UK government sets these tax bands annually. For the 2025/26 tax year, the Personal Allowance remains frozen at £12,570. This means you can earn up to £12,570 before paying any Income Tax. For every £2 you earn over £100,000, your Personal Allowance reduces by £1. This means your Personal Allowance is zero once your income reaches £125,140.</p>
+            
+            <h4 class="text-xl font-semibold text-slate-900 mt-8 mb-3">England, Wales & Northern Ireland Tax Bands</h4>
+            <p class="text-slate-700 mb-4">If you live in England, Wales, or Northern Ireland, your Income Tax is calculated using these rates for 2025/26:</p>
+            <div class="bg-slate-100 rounded-lg p-5 mb-6 overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-300 text-left">
+                            <th class="pb-2 font-semibold">Band</th>
+                            <th class="pb-2 font-semibold">Taxable Income</th>
+                            <th class="pb-2 font-semibold">Tax Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr><td class="py-2">Personal Allowance</td><td class="py-2">Up to £12,570</td><td class="py-2">0%</td></tr>
+                        <tr><td class="py-2">Basic Rate</td><td class="py-2">£12,571 to £50,270</td><td class="py-2">20%</td></tr>
+                        <tr><td class="py-2">Higher Rate</td><td class="py-2">£50,271 to £125,140</td><td class="py-2">40%</td></tr>
+                        <tr><td class="py-2">Additional Rate</td><td class="py-2">Over £125,140</td><td class="py-2">45%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-slate-700 mb-4">Example: If you earn £60,000 in England, you pay 0% on the first £12,570, 20% on the next £37,700 (up to £50,270), and 40% on the final £9,730. Your total Income Tax would be £7,540 + £3,892 = £11,432 for the year.</p>
+
+            <h4 class="text-xl font-semibold text-slate-900 mt-8 mb-3">Scottish Income Tax Bands 2025/26</h4>
+            <p class="text-slate-700 mb-4">The Scottish Parliament sets different Income Tax rates. If you are a Scottish taxpayer, you use these six bands instead of the UK rates. Your Scottish taxpayer status is based on your main residence, not where you work. The Personal Allowance of £12,570 still applies across the UK.</p>
+            <div class="bg-slate-100 rounded-lg p-5 mb-6 overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-300 text-left">
+                            <th class="pb-2 font-semibold">Band</th>
+                            <th class="pb-2 font-semibold">Taxable Income</th>
+                            <th class="pb-2 font-semibold">Tax Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr><td class="py-2">Personal Allowance</td><td class="py-2">Up to £12,570</td><td class="py-2">0%</td></tr>
+                        <tr><td class="py-2">Starter Rate</td><td class="py-2">£12,571 to £15,397</td><td class="py-2">19%</td></tr>
+                        <tr><td class="py-2">Basic Rate</td><td class="py-2">£15,398 to £27,491</td><td class="py-2">20%</td></tr>
+                        <tr><td class="py-2">Intermediate Rate</td><td class="py-2">£27,492 to £43,662</td><td class="py-2">21%</td></tr>
+                        <tr><td class="py-2">Higher Rate</td><td class="py-2">£43,663 to £75,000</td><td class="py-2">42%</td></tr>
+                        <tr><td class="py-2">Advanced Rate</td><td class="py-2">£75,001 to £125,140</td><td class="py-2">45%</td></tr>
+                        <tr><td class="py-2">Top Rate</td><td class="py-2">Over £125,140</td><td class="py-2">48%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-slate-700 mb-4">Scottish taxpayers typically pay slightly more tax than those in the rest of the UK once their income exceeds £27,850. However, those earning between £12,570 and £27,850 pay slightly less due to the 19% Starter Rate. Our calculator automatically handles Scottish tax rules when you select Scotland as your region.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">National Insurance Contributions 2025/26</h3>
+            <p class="text-slate-700 mb-4">National Insurance (NI) is a tax on earnings that qualifies you for certain state benefits, including the State Pension. Employees pay Class 1 NI through PAYE. For 2025/26, the NI thresholds align with the Income Tax Personal Allowance. You pay NI on earnings above £12,570 per year, which equals £242 per week or £1,048 per month.</p>
+            <div class="bg-slate-100 rounded-lg p-5 mb-6">
+                <ul class="space-y-2 text-sm">
+                    <li><strong>0% on earnings up to £12,570:</strong> No NI due</li>
+                    <li><strong>8% on earnings from £12,571 to £50,270:</strong> This is called the Primary Threshold to Upper Earnings Limit</li>
+                    <li><strong>2% on earnings over £50,270:</strong> Earnings above the Upper Earnings Limit</li>
+                </ul>
+            </div>
+            <p class="text-slate-700 mb-4">Example: On a £40,000 salary, you pay 8% NI on £27,430 (£40,000 - £12,570), which equals £2,194.40 per year or £182.87 per month. If you earned £60,000, you would pay 8% on £37,700 = £3,016, plus 2% on £9,730 = £194.60. Total NI = £3,210.60 annually. Unlike Income Tax, NI rates are the same across the entire UK, including Scotland.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Understanding Your Tax Code</h3>
+            <p class="text-slate-700 mb-4">Your tax code is issued by HMRC and tells your employer how much Income Tax to deduct from your pay. It is usually found on your payslip, P45, P60, or PAYE coding notice. The numbers in your tax code represent your Personal Allowance divided by 10. Letters show how it should be adjusted.</p>
+            <div class="bg-slate-100 rounded-lg p-5 mb-6">
+                <p class="font-semibold mb-2">Common Tax Codes for 2025/26:</p>
+                <ul class="space-y-2 text-sm text-slate-700">
+                    <li><strong>1257L:</strong> The standard code for those with one job and the full £12,570 Personal Allowance.</li>
+                    <li><strong>BR:</strong> Basic Rate. All income taxed at 20%. Used for second jobs or pensions.</li>
+                    <li><strong>D0:</strong> Higher Rate. All income taxed at 40%. Used for additional jobs when you are already a higher rate taxpayer.</li>
+                    <li><strong>D1:</strong> Additional Rate. All income taxed at 45%.</li>
+                    <li><strong>S1257L:</strong> Scottish standard code. The 'S' prefix means Scottish rates apply.</li>
+                    <li><strong>K:</strong> You have income not taxed elsewhere, like company benefits, that exceeds your Personal Allowance. Additional tax is collected via PAYE.</li>
+                    <li><strong>NT:</strong> No tax deducted. Used in specific circumstances.</li>
+                </ul>
+            </div>
+            <p class="text-slate-700 mb-4">If you think your tax code is wrong, contact HMRC. An incorrect code means you could pay too much or too little tax. HMRC will issue an updated code to your employer. Tax codes can change mid-year if your circumstances change, such as receiving new benefits-in-kind or starting a second job.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Workplace Pension Contributions</h3>
+            <p class="text-slate-700 mb-4">Under auto-enrolment, most UK employees are automatically enrolled in a workplace pension. The minimum total contribution is 8% of qualifying earnings, made up of 5% from you and 3% from your employer. Qualifying earnings for 2025/26 are between £6,240 and £50,270. Many employers and employees contribute more than the minimum.</p>
+            <p class="text-slate-700 mb-4">Pension contributions are commonly taken via salary sacrifice or a net pay arrangement. Both methods provide tax relief at your marginal rate. With salary sacrifice, your gross pay is reduced before tax and NI are calculated, which usually means you save on National Insurance too. For example, a 5% pension contribution on £40,000 saves you £400 in Income Tax (20%) and £160 in NI (8%), so the net cost of a £2,000 pension contribution is only £1,440. Our calculator assumes a salary sacrifice or net pay arrangement.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Student Loan Repayments 2025/26</h3>
+            <p class="text-slate-700 mb-4">If you have a student loan, repayments are deducted through PAYE when your income exceeds the threshold for your plan. You only make repayments on income above the threshold, and only at 9% of that amount. Postgraduate Loans are repaid at 6%. You stop making repayments if your income drops below the threshold or when the loan is paid off.</p>
+            <div class="bg-slate-100 rounded-lg p-5 mb-6 overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-300 text-left">
+                            <th class="pb-2 font-semibold">Plan</th>
+                            <th class="pb-2 font-semibold">Annual Threshold</th>
+                            <th class="pb-2 font-semibold">Rate</th>
+                            <th class="pb-2 font-semibold">Who</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr><td class="py-2">Plan 1</td><td class="py-2">£24,990</td><td class="py-2">9%</td><td class="py-2">Pre-2012 England/Wales</td></tr>
+                        <tr><td class="py-2">Plan 2</td><td class="py-2">£27,295</td><td class="py-2">9%</td><td class="py-2">Post-2012 England/Wales</td></tr>
+                        <tr><td class="py-2">Plan 4</td><td class="py-2">£31,395</td><td class="py-2">9%</td><td class="py-2">Scotland</td></tr>
+                        <tr><td class="py-2">Plan 5</td><td class="py-2">£25,000</td><td class="py-2">9%</td><td class="py-2">2023+ England</td></tr>
+                        <tr><td class="py-2">Postgraduate</td><td class="py-2">£21,000</td><td class="py-2">6%</td><td class="py-2">Masters/Doctoral</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-slate-700 mb-4">Example: With Plan 2 loan on £40,000 salary, threshold is £27,295. You repay 9% of £12,705 = £1,143.45 per year or £95.29 per month. If you have both an undergraduate and postgraduate loan, you pay 9% for the undergraduate and 6% for the postgraduate simultaneously, which can total 15% on income above the lower threshold.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4">High Income Child Benefit Charge & Personal Allowance Taper</h3>
+            <p class="text-slate-700 mb-4">Two additional factors can affect high earners. First, the Personal Allowance taper: For every £2 earned above £100,000, you lose £1 of your Personal Allowance. This creates an effective 60% marginal tax rate between £100,000 and £125,140. Once you reach £125,140, your Personal Allowance is zero. Second, if you or your partner claim Child Benefit and one of you earns over £60,000, you may have to pay the High Income Child Benefit Charge. The charge is 1% of the benefit for every £200 earned over £60,000. Once you reach £80,000, the charge equals the entire benefit.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-4" id="faq">Frequently Asked Questions</h3>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">Why is my take-home pay lower than I expected?</h4>
+                    <p class="text-slate-700">The two largest deductions are Income Tax and National Insurance. On a £40,000 salary, these total £5,492 and £1,460 respectively. Adding pension and student loan contributions further reduces net pay. Remember that your employer also pays Employer's National Insurance on your salary, but this does not affect your take-home pay.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">Do I pay tax on bonuses and overtime?</h4>
+                    <p class="text-slate-700">Yes. Bonuses, commission, and overtime are treated as regular earnings and taxed through PAYE. HMRC may use an 'emergency tax code' like 1257L W1/M1 for one-off payments, which can temporarily over-tax you. Any overpayment is usually refunded automatically or can be reclaimed.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">How is Scottish tax different from the rest of the UK?</h4>
+                    <p class="text-slate-700">Scotland has six Income Tax bands compared to three in rUK. Scottish rates start lower at 19% but rise to 48% for top earners, compared to 45% in England. At £50,000, a Scottish taxpayer pays £1,706 more Income Tax than someone in England. However, tax codes still provide a £12,570 Personal Allowance UK-wide.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">Should I opt out of my workplace pension to increase take-home pay?</h4>
+                    <p class="text-slate-700">While opting out increases your immediate net pay, you lose employer contributions and tax relief. Employer contributions are effectively free money. A 5% employee contribution with 3% employer match means you get a 60% return before any investment growth. For most people, staying enrolled is beneficial for long-term retirement planning.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">When do student loan repayments stop?</h4>
+                    <p class="text-slate-700">Plan 1 loans are written off after 25 years or when you reach 65. Plan 2 loans are written off 30 years after you become eligible to repay. Plan 4 is 30 years. Plan 5 is 40 years. Postgraduate loans are written off after 30 years. Any remaining balance is cancelled. You can make voluntary additional payments to clear your loan faster.</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mt-12">
+                <h4 class="text-lg font-bold text-blue-900 mb-2">Disclaimer</h4>
+                <p class="text-sm text-blue-800">This calculator provides estimates for guidance only and uses 2025/26 tax rates published by HMRC and the Scottish Government. It does not account for all personal circumstances such as benefits-in-kind, marriage allowance, blind person's allowance, or other deductions. For personal tax advice, consult HMRC or a qualified accountant.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-white">PaycheckCore</span>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md">Free UK salary and tax calculators updated for the 2025/26 tax year. Accurate tools for employees, contractors, and employers across England, Wales, Scotland, and Northern Ireland.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4">Company</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    <li><a href="/blog" class="hover:text-white transition">Tax Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4">Legal</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/privacy" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="/terms" class="hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="/cookies" class="hover:text-white transition">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 pt-8 text-sm text-slate-500 text-center">
+            <p>&copy; 2025 PaycheckCore. All rights reserved. This calculator is for estimation purposes only and does not constitute financial advice.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('salary-form');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Tax year 2025/26 constants
+    const TAX_YEAR = '2025/26';
+    const PERSONAL_ALLOWANCE = 12570;
+    const NI_PRIMARY_THRESHOLD = 12570;
+    const NI_UPPER_EARNINGS_LIMIT = 50270;
+    const NI_RATE = 0.08;
+    const NI_RATE_UPPER = 0.02;
+    const PA_TAPER_START = 100000;
+    const PA_TAPER_END = 125140;
+
+    const SCOTLAND_BANDS = [
+        { min: 0, max: 12570, rate: 0 },
+        { min: 12571, max: 15397, rate: 0.19 },
+        { min: 15398, max: 27491, rate: 0.20 },
+        { min: 27492, max: 43662, rate: 0.21 },
+        { min: 43663, max: 75000, rate: 0.42 },
+        { min: 75001, max: 125140, rate: 0.45 },
+        { min: 125141, max: Infinity, rate: 0.48 }
+    ];
+
+    const RUK_BANDS = [
+        { min: 0, max: 12570, rate: 0 },
+        { min: 12571, max: 50270, rate: 0.20 },
+        { min: 50271, max: 125140, rate: 0.40 },
+        { min: 125141, max: Infinity, rate: 0.45 }
+    ];
+
+    const STUDENT_LOAN_THRESHOLDS = {
+        plan1: { threshold: 24990, rate: 0.09 },
+        plan2: { threshold: 27295, rate: 0.09 },
+        plan4: { threshold: 31395, rate: 0.09 },
+        plan5: { threshold: 25000, rate: 0.09 },
+        pgl: { threshold: 21000, rate: 0.06 },
+        none: { threshold: Infinity, rate: 0 }
+    };
+
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-GB', {
+            style: 'currency',
+            currency: 'GBP',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(amount);
+    }
+
+    function parseTaxCode(code) {
+        code = code.toUpperCase().trim();
+        let personalAllowance = PERSONAL_ALLOWANCE;
+        let isScotland = false;
+        let fixedRate = null;
+
+        if (code.startsWith('S')) {
+            isScotland = true;
+            code = code.substring(1);
+        }
+
+        if (code === 'BR') {
+            personalAllowance = 0;
+            fixedRate = 0.20;
+        } else if (code === 'D0') {
+            personalAllowance = 0;
+            fixedRate = 0.40;
+        } else if (code === 'D1') {
+            personalAllowance = 0;
+            fixedRate = 0.45;
+        } else if (code === 'NT') {
+            personalAllowance = 0;
+            fixedRate = 0;
+        } else if (code.startsWith('K')) {
+            const num = parseInt(code.substring(1));
+            if (!isNaN(num)) {
+                personalAllowance = -num * 10;
+            }
+        } else {
+            const match = code.match(/^(\d+)/);
+            if (match) {
+                personalAllowance = parseInt(match[1]) * 10;
+            }
+        }
+
+        if (code.endsWith('L') || code.endsWith('M') || code.endsWith('N')) {
+            // Standard suffixes, no change
+        }
+
+        return { personalAllowance, isScotland, fixedRate };
+    }
+
+    function calculatePersonalAllowance(gross, basePA) {
+        if (gross <= PA_TAPER_START) return basePA;
+        if (gross >= PA_TAPER_END) return 0;
+        const reduction = Math.floor((gross - PA_TAPER_START) / 2);
+        return Math.max(0, basePA - reduction);
+    }
+
+    function calculateIncomeTax(taxableIncome, bands, fixedRate) {
+        if (fixedRate !== null) {
+            return taxableIncome * fixedRate;
+        }
+
+        let tax = 0;
+        let remaining = taxableIncome;
+
+        for (let i = 0; i < bands.length; i++) {
+            const band = bands[i];
+            if (taxableIncome <= band.min) break;
+            
+            const bandMin = band.min;
+            const bandMax = band.max === Infinity ? taxableIncome : Math.min(band.max, taxableIncome);
+            const bandAmount = Math.max(0, bandMax - bandMin);
+            
+            if (bandAmount > 0) {
+                tax += bandAmount * band.rate;
+            }
+        }
+        return tax;
+    }
+
+    function calculateNI(gross) {
+        if (gross <= NI_PRIMARY_THRESHOLD) return 0;
+        let ni = 0;
+        if (gross > NI_UPPER_EARNINGS_LIMIT) {
+            ni += (NI_UPPER_EARNINGS_LIMIT - NI_PRIMARY_THRESHOLD) * NI_RATE;
+            ni += (gross - NI_UPPER_EARNINGS_LIMIT) * NI_RATE_UPPER;
+        } else {
+            ni += (gross - NI_PRIMARY_THRESHOLD) * NI_RATE;
+        }
+        return ni;
+    }
+
+    function calculateStudentLoan(gross, plan) {
+        const config = STUDENT_LOAN_THRESHOLDS[plan];
+        if (!config || gross <= config.threshold) return 0;
+        return (gross - config.threshold) * config.rate;
+    }
+
+    function calculateTakeHome() {
+        const grossSalary = parseFloat(document.getElementById('grossSalary').value) || 0;
+        const taxCode = document.getElementById('taxCode').value || '1257L';
+        const region = document.getElementById('region').value;
+        const pensionPercent = parseFloat(document.getElementById('pension').value) || 0;
+        const studentLoanPlan = document.getElementById('studentLoan').value;
+
+        const { personalAllowance: basePA, isScotland, fixedRate } = parseTaxCode(taxCode);
+        const useScotland = region === 'scotland' || isScotland;
+        
+        const pensionAmount = grossSalary * (pensionPercent / 100);
+        const grossAfterPension = grossSalary - pensionAmount;
+        
+        const personalAllowance = calculatePersonalAllowance(grossAfterPension, basePA);
+        const taxableIncome = Math.max(0, grossAfterPension - personalAllowance);
+        
+        const bands = useScotland ? SCOTLAND_BANDS : RUK_BANDS;
+        const incomeTax = calculateIncomeTax(taxableIncome, bands, fixedRate);
+        const ni = calculateNI(grossAfterPension);
+        const studentLoan = calculateStudentLoan(grossAfterPension, studentLoanPlan);
+        
+        const totalDeductions = incomeTax + ni + pensionAmount + studentLoan;
+        const takeHome = grossSalary - totalDeductions;
+
+        updateUI({
+            gross: grossSalary,
+            tax: incomeTax,
+            ni: ni,
+            pension: pensionAmount,
+            studentLoan: studentLoan,
+            takeHome: takeHome
+        });
+    }
+
+    function updateUI(results) {
+        const annual = (val) => val;
+        const monthly = (val) => val / 12;
+        const weekly = (val) => val / 52;
+
+        document.getElementById('monthlyTakeHome').textContent = formatCurrency(monthly(results.takeHome));
+        document.getElementById('annualTakeHome').textContent = formatCurrency(annual(results.takeHome));
+        document.getElementById('weeklyTakeHome').textContent = formatCurrency(weekly(results.takeHome));
+
+        document.getElementById('annualTax').textContent = formatCurrency(annual(results.tax));
+        document.getElementById('monthlyTax').textContent = formatCurrency(monthly(results.tax)) + ' / month';
+
+        document.getElementById('annualNI').textContent = formatCurrency(annual(results.ni));
+        document.getElementById('monthlyNI').textContent = formatCurrency(monthly(results.ni)) + ' / month';
+
+        document.getElementById('annualPension').textContent = formatCurrency(annual(results.pension));
+        document.getElementById('monthlyPension').textContent = formatCurrency(monthly(results.pension)) + ' / month';
+
+        document.getElementById('annualSL').textContent = formatCurrency(annual(results.studentLoan));
+        document.getElementById('monthlySL').textContent = formatCurrency(monthly(results.studentLoan)) + ' / month';
+
+        // Table updates
+        document.getElementById('tableGrossAnnual').textContent = formatCurrency(annual(results.gross));
+        document.getElementById('tableGrossMonthly').textContent = formatCurrency(monthly(results.gross));
+        document.getElementById('tableGrossWeekly').textContent = formatCurrency(weekly(results.gross));
+
+        document.getElementById('tableTaxAnnual').textContent = '-' + formatCurrency(annual(results.tax));
+        document.getElementById('tableTaxMonthly').textContent = '-' + formatCurrency(monthly(results.tax));
+        document.getElementById('tableTaxWeekly').textContent = '-' + formatCurrency(weekly(results.tax));
+
+        document.getElementById('tableNIAnnual').textContent = '-' + formatCurrency(annual(results.ni));
+        document.getElementById('tableNIMonthly').textContent = '-' + formatCurrency(monthly(results.ni));
+        document.getElementById('tableNIWeekly').textContent = '-' + formatCurrency(weekly(results.ni));
+
+        document.getElementById('tablePensionAnnual').textContent = '-' + formatCurrency(annual(results.pension));
+        document.getElementById('tablePensionMonthly').textContent = '-' + formatCurrency(monthly(results.pension));
+        document.getElementById('tablePensionWeekly').textContent = '-' + formatCurrency(weekly(results.pension));
+
+        document.getElementById('tableSLAnnual').textContent = results.studentLoan > 0 ? '-' + formatCurrency(annual(results.studentLoan)) : formatCurrency(0);
+        document.getElementById('tableSLMonthly').textContent = results.studentLoan > 0 ? '-' + formatCurrency(monthly(results.studentLoan)) : formatCurrency(0);
+        document.getElementById('tableSLWeekly').textContent = results.studentLoan > 0 ? '-' + formatCurrency(weekly(results.studentLoan)) : formatCurrency(0);
+
+        document.getElementById('tableNetAnnual').textContent = formatCurrency(annual(results.takeHome));
+        document.getElementById('tableNetMonthly').textContent = formatCurrency(monthly(results.takeHome));
+        document.getElementById('tableNetWeekly').textContent = formatCurrency(weekly(results.takeHome));
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        calculateTakeHome();
+    });
+
+    form.addEventListener('input', calculateTakeHome);
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking links
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Initial calculation
+    calculateTakeHome();
+});
+</script>
+</body>
+</html>

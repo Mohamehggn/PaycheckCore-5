@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary to Hourly Calculator 2026 - Convert Annual Salary to Hourly Rate</title>
+    <meta name="description" content="Free salary to hourly calculator 2026. Convert annual salary to hourly rate instantly. Accounts for work hours, PTO, holidays, and vacation days to calculate true hourly equivalent. Best salary to hourly converter.">
+    <meta name="keywords" content="salary to hourly calculator, convert salary to hourly, annual salary to hourly rate, salary to hourly converter, salary to hourly wage, 60000 salary to hourly, 100k salary to hourly, 80000 salary hourly, salary hourly calculator, year salary to hour">
+    
+    <!-- AdSense Tag #1: Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9810476704160902" crossorigin="anonymous"></script>
+    
+    <!-- AdSense Tag #2: Meta Verification -->
+    <meta name="google-adsense-account" content="ca-pub-9810476704160902">
+    
+    <!-- AdSense Tag #3: Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDKHR4R06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FTDKHR4R06');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .calculator-body { padding: 40px; }
+        .input-group { margin-bottom: 25px; }
+        .input-group label { 
+            display: block; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #333;
+            font-size: 0.95em;
+        }
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        input { 
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 8px; 
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        input:focus { 
+            outline: none; 
+            border-color: #667eea; 
+        }
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .calculate-btn:hover { transform: translateY(-2px); }
+        .results {
+            margin-top: 30px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: none;
+        }
+        .results.show { display: block; }
+        .result-main {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .result-main .amount {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        .result-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .detail-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .detail-box .label { font-size: 0.9em; color: #666; margin-bottom: 5px; }
+        .detail-box .value { font-size: 1.3em; font-weight: 600; color: #333; }
+        .how-to-use {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        .how-to-use h2 { color: #333; margin-bottom: 15px; font-size: 1.5em; }
+        .how-to-use h3 { color: #667eea; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; }
+        .how-to-use p, .how-to-use li { color: #555; line-height: 1.8; margin-bottom: 10px; }
+        .how-to-use ul { padding-left: 20px; }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .input-row, .result-details { grid-template-columns: 1fr; }
+            .calculator-body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Salary to Hourly Calculator</h1>
+            <p>Convert your annual salary to hourly rate accounting for PTO, holidays, and vacation</p>
+        </div>
+        
+        <div class="calculator-body">
+            <div class="input-group">
+                <label>Annual Salary ($)</label>
+                <input type="number" id="salary" placeholder="75000" step="1000">
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Hours Worked per Week</label>
+                    <input type="number" id="hours" value="40" step="0.5">
+                </div>
+                <div class="input-group">
+                    <label>Paid Weeks per Year</label>
+                    <input type="number" id="weeks" value="52" step="1">
+                    <small style="color: #666;">Use 50 for 2 weeks unpaid vacation</small>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Paid Time Off Days (PTO)</label>
+                    <input type="number" id="pto" value="10" step="1">
+                </div>
+                <div class="input-group">
+                    <label>Paid Holidays per Year</label>
+                    <input type="number" id="holidays" value="10" step="1">
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateHourly()">Calculate Hourly Rate</button>
+
+            <div class="results" id="results">
+                <div class="result-main">
+                    <div class="label">Your True Hourly Rate</div>
+                    <div class="amount" id="hourlyRate">$0.00</div>
+                    <div class="label">Based on actual hours worked</div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-box">
+                        <div class="label">Total Work Hours/Year</div>
+                        <div class="value" id="totalHours">0</div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="label">Weekly Equivalent</div>
+                        <div class="value" id="weeklyPay">$0</div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="label">Daily Rate (5 days)</div>
+                        <div class="value" id="dailyPay">$0</div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="label">Without PTO/Holidays</div>
+                        <div class="value" id="baseHourly">$0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how-to-use">
+                <h2>How to Use the Salary to Hourly Calculator</h2>
+                <p>Convert your annual salary to an hourly wage. This calculator accounts for PTO, holidays, and actual hours worked to give you the most accurate hourly equivalent of your salary.</p>
+                
+                <h3>Step 1: Enter Your Annual Salary</h3>
+                <p>Input your gross yearly salary before taxes. Example: Enter 75000 for a $75,000 salary.</p>
+                
+                <h3>Step 2: Set Your Work Schedule</h3>
+                <p>Enter hours per week (typically 40) and paid weeks per year. Standard is 52 weeks, but use 50 if you take 2 weeks unpaid, 48 for 4 weeks unpaid.</p>
+                
+                <h3>Step 3: Add Paid Time Off</h3>
+                <p>Include PTO days and paid holidays. Standard US is 10 PTO + 10 holidays = 20 days. This calculates your TRUE hourly rate based on days you actually work.</p>
+                
+                <h3>Why Convert Salary to Hourly?</h3>
+                <ul>
+                    <li><strong>Compare Job Offers:</strong> See if a $70k salary beats a $35/hour contract role</li>
+                    <li><strong>Freelance Pricing:</strong> Know your hourly value to set consulting or freelance rates</li>
+                    <li><strong>Overtime Value:</strong> Understand what your time is worth for side projects</li>
+                    <li><strong>Salary Negotiation:</strong> Break down annual salary into hourly to negotiate better</li>
+                    <li><strong>Time Management:</strong> Know if that 2-hour meeting is worth $100 of your time</li>
+                </ul>
+
+                <h3>Common Salary to Hourly Conversions 2026</h3>
+                <ul>
+                    <li>$40,000 salary = $19.23/hour (40 hrs, 52 weeks)</li>
+                    <li>$50,000 salary = $24.04/hour (40 hrs, 52 weeks)</li>
+                    <li>$60,000 salary = $28.85/hour (40 hrs, 52 weeks)</li>
+                    <li>$75,000 salary = $36.06/hour (40 hrs, 52 weeks)</li>
+                    <li>$80,000 salary = $38.46/hour (40 hrs, 52 weeks)</li>
+                    <li>$100,000 salary = $48.08/hour (40 hrs, 52 weeks)</li>
+                    <li>$120,000 salary = $57.69/hour (40 hrs, 52 weeks)</li>
+                    <li>$150,000 salary = $72.12/hour (40 hrs, 52 weeks)</li>
+                </ul>
+                
+                <h3>Pro Tip: True Hourly Rate</h3>
+                <p>Your "true" hourly rate is higher when you factor in PTO and holidays. If you make $80,000 but get 4 weeks PTO + 2 weeks holidays, you're actually making $41.67/hour, not $38.46/hour. This calculator shows both.</p>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to All Calculators</a>
+        </div>
+    </div>
+
+    <script>
+        function calculateHourly() {
+            const salary = parseFloat(document.getElementById('salary').value) || 0;
+            const hours = parseFloat(document.getElementById('hours').value) || 40;
+            const weeks = parseFloat(document.getElementById('weeks').value) || 52;
+            const pto = parseFloat(document.getElementById('pto').value) || 0;
+            const holidays = parseFloat(document.getElementById('holidays').value) || 0;
+            
+            const baseHoursPerYear = hours * weeks;
+            const ptoHours = (pto + holidays) * (hours / 5);
+            const actualWorkHours = baseHoursPerYear - ptoHours;
+            
+            const baseHourly = salary / baseHoursPerYear;
+            const trueHourly = salary / actualWorkHours;
+            const weeklyPay = salary / weeks;
+            const dailyPay = weeklyPay / 5;
+            
+            document.getElementById('hourlyRate').textContent = '$' + trueHourly.toFixed(2);
+            document.getElementById('totalHours').textContent = actualWorkHours.toLocaleString('en-US');
+            document.getElementById('weeklyPay').textContent = '$' + weeklyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('dailyPay').textContent = '$' + dailyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('baseHourly').textContent = '$' + baseHourly.toFixed(2);
+            
+            document.getElementById('results').classList.add('show');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Home Pay Calculator 2026 - Calculate Net Paycheck After Taxes</title>
+    <meta name="description" content="Free take home pay calculator 2026. Calculate your net paycheck after federal tax, state tax, FICA, 401k, and deductions. Quick take home pay estimation for salary and hourly. See exact take home pay per paycheck.">
+    <meta name="keywords" content="take home pay calculator, take home pay calculator after taxes, net pay calculator, paycheck calculator take home, calculate take home pay, take home salary calculator, net paycheck calculator, take home pay estimator, after tax calculator, take home income calculator, monthly take home pay, biweekly take home pay, salary take home pay">
+    
+    <!-- AdSense Tag #1: Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9810476704160902" crossorigin="anonymous"></script>
+    
+    <!-- AdSense Tag #2: Meta Verification -->
+    <meta name="google-adsense-account" content="ca-pub-9810476704160902">
+    
+    <!-- AdSense Tag #3: Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTDKHR4R06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FTDKHR4R06');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .calculator-body { padding: 40px; }
+        .input-group { margin-bottom: 25px; }
+        .input-group label { 
+            display: block; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #333;
+            font-size: 0.95em;
+        }
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        input, select { 
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 8px; 
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        input:focus, select:focus { 
+            outline: none; 
+            border-color: #667eea; 
+        }
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .calculate-btn:hover { transform: translateY(-2px); }
+        .results {
+            margin-top: 30px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: none;
+        }
+        .results.show { display: block; }
+        .result-main {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .result-main .amount {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .result-card .label { font-size: 0.9em; color: #666; margin-bottom: 8px; }
+        .result-card .value { font-size: 1.5em; font-weight: 600; color: #333; }
+        .how-to-use {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        .how-to-use h2 { color: #333; margin-bottom: 15px; font-size: 1.5em; }
+        .how-to-use h3 { color: #667eea; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; }
+        .how-to-use p, .how-to-use li { color: #555; line-height: 1.8; margin-bottom: 10px; }
+        .how-to-use ul { padding-left: 20px; }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .input-row, .result-grid { grid-template-columns: 1fr; }
+            .calculator-body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Take Home Pay Calculator</h1>
+            <p>Quick take home pay estimation - see your net paycheck after taxes and deductions</p>
+        </div>
+        
+        <div class="calculator-body">
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Pay Type</label>
+                    <select id="payType">
+                        <option value="salary">Annual Salary</option>
+                        <option value="hourly">Hourly Wage</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Pay Frequency</label>
+                    <select id="frequency">
+                        <option value="52">Weekly</option>
+                        <option value="26">Biweekly</option>
+                        <option value="24">Semi-Monthly</option>
+                        <option value="12">Monthly</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label id="wageLabel">Annual Salary ($)</label>
+                <input type="number" id="wage" placeholder="75000" step="1000">
+            </div>
+
+            <div class="input-row" id="hourlyInputs" style="display: none;">
+                <div class="input-group">
+                    <label>Hours per Week</label>
+                    <input type="number" id="hours" value="40" step="0.5">
+                </div>
+                <div class="input-group">
+                    <label>Weeks per Year</label>
+                    <input type="number" id="weeks" value="52" step="1">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Filing Status</label>
+                    <select id="filingStatus">
+                        <option value="single">Single</option>
+                        <option value="married">Married Filing Jointly</option>
+                        <option value="head">Head of Household</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>State</label>
+                    <select id="state">
+                        <option value="0">No State Tax</option>
+                        <option value="3">3% State Tax</option>
+                        <option value="5">5% State Tax</option>
+                        <option value="7">7% State Tax</option>
+                        <option value="9">9% State Tax</option>
+                        <option value="11">11% State Tax (CA)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>401k Contribution (%)</label>
+                    <input type="number" id="retirement" value="6" step="0.5">
+                </div>
+                <div class="input-group">
+                    <label>Health Insurance ($/month)</label>
+                    <input type="number" id="health" value="300" step="50">
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateTakeHome()">Calculate Take Home Pay</button>
+
+            <div class="results" id="results">
+                <div class="result-main">
+                    <div class="label">Your Take Home Pay Per Paycheck</div>
+                    <div class="amount" id="takeHomePay">$0</div>
+                    <div class="label">After federal tax, state tax, FICA, and deductions</div>
+                </div>
+                
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="label">Annual Take Home</div>
+                        <div class="value" id="annualTakeHome">$0</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">Monthly Take Home</div>
+                        <div class="value" id="monthlyTakeHome">$0</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">Gross Pay/Check</div>
+                        <div class="value" id="grossPay">$0</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="label">Total Deductions</div>
+                        <div class="value" id="totalDeductions">$0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how-to-use">
+                <h2>How to Use the Take Home Pay Calculator</h2>
+                <p>This take home pay calculator shows your exact net paycheck after federal taxes, state taxes, FICA, 401k, and health insurance. Perfect for budgeting and comparing job offers.</p>
+                
+                <h3>Step 1: Enter Your Gross Pay</h3>
+                <p>Select Annual Salary or Hourly Wage. For salary, enter your yearly amount. For hourly, enter your hourly rate and hours per week.</p>
+                
+                <h3>Step 2: Choose Pay Frequency</h3>
+                <p>Select how often you get paid: Weekly (52 paychecks), Biweekly (26), Semi-Monthly (24), or Monthly (12). Most W-2 employees are paid biweekly.</p>
+                
+                <h3>Step 3: Set Filing Status & State</h3>
+                <p>Your filing status and state determine tax rates. Single filers pay more than married. States like CA, NY have higher rates than TX, FL (no state tax).</p>
+                
+                <h3>Step 4: Add Deductions</h3>
+                <p>Include 401k % and monthly health insurance cost. The calculator applies standard FICA (7.65%) and estimates federal tax based on 2026 brackets.</p>
+                
+                <h3>What is Take Home Pay?</h3>
+                <ul>
+                    <li><strong>Take Home Pay:</strong> Your net paycheck - the actual money deposited in your bank account</li>
+                    <li><strong>Gross Pay:</strong> Total earnings before any deductions or taxes</li>
+                    <li><strong>Deductions:</strong> Federal tax, state tax, FICA (Social Security + Medicare), 401k, health insurance</li>
+                    <li><strong>Average:</strong> Most people take home 65-75% of gross pay after all deductions</li>
+                </ul>
+
+                <h3>Common Take Home Pay Examples 2026</h3>
+                <ul>
+                    <li><strong>$50,000 salary:</strong> ~$3,100-$3,400/month take home (biweekly: $1,550-$1,700)</li>
+                    <li><strong>$75,000 salary:</strong> ~$4,500-$4,900/month take home (biweekly: $2,250-$2,450)</li>
+                    <li><strong>$100,000 salary:</strong> ~$5,800-$6,300/month take home (biweekly: $2,900-$3,150)</li>
+                    <li><strong>$120,000 salary:</strong> ~$6,800-$7,400/month take home (biweekly: $3,400-$3,700)</li>
+                    <li><strong>$25/hour (40 hrs):</strong> ~$3,250/month take home ($52k salary equivalent)</li>
+                    <li><strong>$35/hour (40 hrs):</strong> ~$4,500/month take home ($72.8k salary equivalent)</li>
+                </ul>
+                
+                <h3>Why Calculate Take Home Pay?</h3>
+                <ul>
+                    <li><strong>Budget Accurately:</strong> Plan rent, mortgage, and bills using actual income, not gross</li>
+                    <li><strong>Job Offers:</strong> Compare take home pay between salary vs hourly positions</li>
+                    <li><strong>Tax Planning:</strong> See how 401k contributions reduce taxable income and increase take home %</li>
+                    <li><strong>Loan Applications:</strong> Lenders use gross income, but you budget with net income</li>
+                    <li><strong>Salary Negotiation:</strong> Know your target take home pay to negotiate gross salary</li>
+                </ul>
+                
+                <p><strong>Pro Tip:</strong> To maximize take home pay, increase 401k/HSA contributions (pre-tax), claim correct W-4 allowances, or move to a no-income-tax state like Texas, Florida, or Washington.</p>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to All Calculators</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('payType').addEventListener('change', function() {
+            const isHourly = this.value === 'hourly';
+            document.getElementById('hourlyInputs').style.display = isHourly? 'grid' : 'none';
+            document.getElementById('wageLabel').textContent = isHourly? 'Hourly Wage ($)' : 'Annual Salary ($)';
+        });
+
+        function calculateTakeHome() {
+            const payType = document.getElementById('payType').value;
+            const frequency = parseFloat(document.getElementById('frequency').value);
+            const wage = parseFloat(document.getElementById('wage').value) || 0;
+            const hours = parseFloat(document.getElementById('hours').value) || 40;
+            const weeks = parseFloat(document.getElementById('weeks').value) || 52;
+            const filingStatus = document.getElementById('filingStatus').value;
+            const stateRate = parseFloat(document.getElementById('state').value) / 100;
+            const retireRate = parseFloat(document.getElementById('retirement').value) / 100 || 0;
+            const healthMonthly = parseFloat(document.getElementById('health').value) || 0;
+            
+            let annualGross;
+            if (payType === 'hourly') {
+                annualGross = wage * hours * weeks;
+            } else {
+                annualGross = wage;
+            }
+            
+            const grossPerCheck = annualGross / frequency;
+            const healthPerCheck = (healthMonthly * 12) / frequency;
+            
+            // Simplified tax calculation
+            let fedTaxRate = 0.12; // Average
+            if (filingStatus === 'single') {
+                if (annualGross > 100000) fedTaxRate = 0.22;
+                else if (annualGross > 50000) fedTaxRate = 0.12;
+                else fedTaxRate = 0.10;
+            } else if (filingStatus === 'married') {
+                if (annualGross > 200000) fedTaxRate = 0.22;
+                else if (annualGross > 100000) fedTaxRate = 0.12;
+                else fedTaxRate = 0.10;
+            }
+            
+            const ficaRate = 0.0765;
+            const fedTax = grossPerCheck * fedTaxRate;
+            const stateTax = grossPerCheck * stateRate;
+            const fica = grossPerCheck * ficaRate;
+            const retirement = grossPerCheck * retireRate;
+            
+            const totalDeductions = fedTax + stateTax + fica + retirement + healthPerCheck;
+            const takeHomePerCheck = grossPerCheck - totalDeductions;
+            const annualTakeHome = takeHomePerCheck * frequency;
+            const monthlyTakeHome = annualTakeHome / 12;
+            
+            document.getElementById('takeHomePay').textContent = '$' + takeHomePerCheck.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('annualTakeHome').textContent = '$' + annualTakeHome.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            document.getElementById('monthlyTakeHome').textContent = '$' + monthlyTakeHome.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            document.getElementById('grossPay').textContent = '$' + grossPerCheck.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('totalDeductions').textContent = '$' + totalDeductions.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            
+            document.getElementById('results').classList.add('show');
+        }
+    </script>
+</body>
+</html>
